@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Footer from '../../Footer'
-import Header from '../../Header'
+import {Header, Footer } from '../../../components'
 
 export default function AppLayout({ children }) {
   return (
