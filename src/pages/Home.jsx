@@ -1,5 +1,5 @@
 import { useAccount } from 'wagmi'
-import { LoadingSpinner, Button, ErrorInfo } from '../components/ui'
+import { LoadingSpinner, Button, ErrorInfo, TextInput } from '../components/ui'
 
 export default function Home() {
 
@@ -15,6 +15,9 @@ export default function Home() {
           <Button isLoading={isConnecting}>Comprar Tokens..</Button> 
         </div>
         <ErrorInfo message="Esto es un mensaje de error" />
+        <div>
+          <TextInput placeholder="Introduce nombre"/>
+        </div>
       </div>
     )
   }
