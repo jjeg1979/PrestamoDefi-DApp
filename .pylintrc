@@ -1,0 +1,21 @@
+[MASTER]
+docstring-min-length=10
+disable=missing-docstring,
+        too-few-public-methods,
+        import-error,
+        pointless-statement,
+        unused-import,
+        unused-variable,
+        no-member,
+        line-too-long,
+        too-many-arguments,
+        broad-except,
+        forgotten-debug-statement,
+        dangerous-default-value,
+        no-name-in-module,
+        attribute-defined-outside-init,
+        invalid-name,
+        c-extension-no-member,
+
+[FORMAT]
+good-names=i,j,x,y,id,p,c1,c2,c3
