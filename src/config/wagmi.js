@@ -9,6 +9,7 @@ export const config = createConfig(
     alchemyId: import.meta.env.VITE_ALCHEMY_ID,
     walletConnectProjectId: import.meta.env.VITE_WALLETCONNECT_PROJECT_ID,
     appName: "Prestamos DeFi",
+
     // Configuramos la chain
     chains: [sepolia],
   })
