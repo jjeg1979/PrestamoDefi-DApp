@@ -1,5 +1,5 @@
 import { useAccount } from 'wagmi'
-import { LoadingSpinner, Button, ErrorInfo, TextInput } from '../components/ui'
+import { LoadingSpinner, Button, ErrorInfo, TextInput, Title } from '../components/ui'
 
 export default function Home() {
 
@@ -17,6 +17,9 @@ export default function Home() {
         <ErrorInfo message="Esto es un mensaje de error" />
         <div>
           <TextInput placeholder="Introduce nombre"/>
+        </div>
+        <div>
+          <Title>Bienvenido a PrestamosDeFi</Title>
         </div>
       </div>
     )
