@@ -23,12 +23,13 @@ export default function Home() {
         </>
       ) : (
         <>
-          <p className="text-gray-500 md:text-xl text-center ">
-            Una aplicación para que gente con ideas pero sin dinero pueda asociarse con gente que esté dispuesta a invertir en esas ideas.
-            <br />
-            Blockmaker PrestamosDeFi DApp ofrece transacciones rápidas, bajas tarifas y una plataforma segura.
-            <br /> Ideal para proyectos de DeFi, juegos en blockchain y mucho más.
-          </p>
+          <div className="flex gap-12">
+            <p className="text-gray-500 md:text-xl text-center py-10">
+              Una aplicación para que gente con ideas pero sin dinero pueda asociarse con gente que esté dispuesta a invertir en esas ideas.
+              <br />
+              Blockmaker PrestamosDeFi DApp ofrece transacciones rápidas, bajas tarifas y una plataforma segura.            
+            </p>
+          </div>
           <p className="text-xl sm:text-2xl">🔒 Conecta tu wallet para comenzar.</p>
           <ConnectKitButton />
         </>
