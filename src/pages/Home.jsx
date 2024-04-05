@@ -10,8 +10,12 @@ export default function Home() {
 
     if (isConnecting) return <div>Connecting...</div>
     if (isDisconnected) return (
-      <div>
-        <ConnectKitButton />
+      <div className="h-screen grid place-items-center">
+        <div className="grid place-items-center gap-10">
+          <h2 className="text-5xl text-indigo-500 font-bold">Aplicación de Prestamos DeFi</h2>
+          <p className="text-xl text-gray-700 font-bold">Conecta tu wallet para interactuar con la DApp PretamoDeFi</p>
+        <ConnectKitButton mode="dark" />
+        </div>
       </div>
       )
     return (
