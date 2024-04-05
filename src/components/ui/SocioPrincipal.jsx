@@ -19,7 +19,7 @@ export default function SocioPrincipal() {
     functionName: 'socioPrincipal',
     }); 
 
-    if(!isLoading) return <SocioPrincipalSkeleton />
+    if(isLoading) return <SocioPrincipalSkeleton />
     
     return (
         <section className="flex flex-col before:bg-white border shadow p-4 rounded w-[360px] sm:w-[469px]">
