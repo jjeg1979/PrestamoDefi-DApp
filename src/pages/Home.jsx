@@ -1,5 +1,6 @@
 import { useAccount } from 'wagmi'
 import { LoadingSpinner, Button, ErrorInfo, TextInput, Title, SocioPrincipal } from '../components/ui'
+import AltaPrestamista from './usuarios/AltaPrestamista'
 
 export default function Home() {
 
@@ -12,7 +13,7 @@ export default function Home() {
         <div>Connected Wallet: {address}</div>
         <LoadingSpinner className="h-12 w-12"/>
         <div>
-          <Button isLoading={isConnecting}>Comprar Tokens..</Button> 
+          <Button isLoading={isConnecting}>Comprar Tokens</Button> 
         </div>
         <ErrorInfo message="Esto es un mensaje de error" />
         <div>
@@ -23,6 +24,8 @@ export default function Home() {
         </div>
 
         <SocioPrincipal />
+
+        <AltaPrestamista />
       </div>
     )
   }
