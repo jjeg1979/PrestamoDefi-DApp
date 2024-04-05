@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 function SocioPrincipalSkeleton() {
     return (
         <div className="bg-white border shadow px-3.5 py-5 rounded-md grid gap-2 w-[360px] sm:w-[469px]" >
-            <div className="h5 bg-gray-300 rounded animate-pulse w-20" />
+            <div className="h-5 bg-gray-300 rounded animate-pulse w-20" />
             <div className="h-7 bg-gray-300 rounded animate-pulse" />
         </div>
     )
@@ -19,7 +19,7 @@ export default function SocioPrincipal() {
     functionName: 'socioPrincipal',
     }); 
 
-    if(isLoading) return <SocioPrincipalSkeleton />
+    if(!isLoading) return <SocioPrincipalSkeleton />
     
     return (
         <section className="flex flex-col before:bg-white border shadow p-4 rounded w-[360px] sm:w-[469px]">
