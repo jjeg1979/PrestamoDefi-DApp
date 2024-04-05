@@ -59,7 +59,7 @@ export default function AltaPrestamista() {
                     onClick={() => write?.()} 
                     disabled={!nuevoPrestamista || isAltaPrestamistaLoading}
                     isLoading={isAltaPrestamistaLoading}
-                >{isAltaPrestamistaLoading ? "Dando de Alta" : "Dar de Alta"}</Button>
+                >{isAltaPrestamistaLoading ? "Dando de Alta Prestamista..." : "Dar de Alta"}</Button>
             </form>
         </section>
     )
