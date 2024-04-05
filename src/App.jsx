@@ -16,7 +16,7 @@ function App() {
       <ConnectKitProvider mode="light">
         <AppLayout>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route index element={<Home />} />
             <Route path="/usuarios" element={<GestionUsuarios />} />
             <Route path="/prestamos" element={<GestionPrestamos />} />
           </Routes>
