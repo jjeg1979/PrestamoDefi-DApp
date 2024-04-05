@@ -6,38 +6,33 @@ import { ConnectKitButton } from 'connectkit'
 
 export default function Home() {
 
-    const { address, isConnecting, isDisconnected } = useAccount()
+    const { isConnected } = useAccount()
 
-    if (isConnecting) return <div>Connecting...</div>
-    if (isDisconnected) return (
-      <div className="h-screen grid place-items-center">
-        <div className="grid place-items-center gap-10">
-          <h2 className="text-5xl text-indigo-500 font-bold">Aplicación de Prestamos DeFi</h2>
-          <p className="text-xl text-gray-700 font-bold">Conecta tu wallet para interactuar con la DApp PretamoDeFi</p>
-        <ConnectKitButton mode="dark" />
-        </div>
-      </div>
-      )
+   
     return (
-      <div className="flex flex-col justify-between gap-6">
-        <div>Connected Wallet: {address}</div>
-        <LoadingSpinner className="h-12 w-12"/>
-        <div>
-          <Button isLoading={isConnecting}>Comprar Tokens</Button> 
-        </div>
-        <ErrorInfo message="Esto es un mensaje de error" />
-        <div>
-          <TextInput placeholder="Introduce nombre"/>
-        </div>
-        <div>
-          <Title>Bienvenido a PrestamosDeFi</Title>
-        </div>
+      <div className="flex flex-col self-center sm:grid place-items-center px-3 py-16 md:px-5 gap-12">
+        <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl mb-2 bg-gradient-to-r from-indigo-600 to-green-400 text-transparent bg-clip-text">
+        Blockmaker PrestamosDeFi DApp
+      </h1>
 
-        <SocioPrincipal />
-
-        <AltaPrestamista />
-
-        <AltaCliente />
+      {isConnected ? (
+        <>
+          <SocioPrincipal />
+          <AltaPrestamista />
+          <AltaCliente />
+        </>
+      ) : (
+        <>
+          <p className="text-gray-500 md:text-xl text-center ">
+            Una aplicación para que gente con ideas pero sin dinero pueda asociarse con gente que esté dispuesta a invertir en esas ideas.
+            <br />
+            Blockmaker PrestamosDeFi DApp ofrece transacciones rápidas, bajas tarifas y una plataforma segura.
+            <br /> Ideal para proyectos de DeFi, juegos en blockchain y mucho más.
+          </p>
+          <p className="text-xl sm:text-2xl">🔒 Conecta tu wallet para comenzar.</p>
+          <ConnectKitButton />
+        </>
+      )}
       </div>
     )
   }
