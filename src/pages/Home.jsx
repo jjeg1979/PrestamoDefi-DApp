@@ -1,5 +1,5 @@
 import { useAccount } from 'wagmi'
-import { LoadingSpinner, Button, ErrorInfo, TextInput, Title, SocioPrincipal, TotalLoanBalance } from '../components/ui'
+import { SocioPrincipal, TotalLoanBalance } from '../components/ui'
 import AltaPrestamista from './usuarios/AltaPrestamista'
 import { AltaCliente } from './usuarios'
 import { ConnectKitButton } from 'connectkit'
