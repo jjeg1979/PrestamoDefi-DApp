@@ -1,5 +1,5 @@
 import { AppLayout } from './components/ui/layouts'
-import Home from './pages/Home'
+import Home from './pages/landing/Home'
 import { WagmiConfig } from 'wagmi'
 import { ConnectKitProvider } from 'connectkit'
 import { config } from './config/wagmi'
