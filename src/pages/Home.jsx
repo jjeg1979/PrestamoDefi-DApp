@@ -1,5 +1,5 @@
 import { useAccount } from 'wagmi'
-import { LoadingSpinner, Button, ErrorInfo, TextInput, Title } from '../components/ui'
+import { LoadingSpinner, Button, ErrorInfo, TextInput, Title, SocioPrincipal } from '../components/ui'
 
 export default function Home() {
 
@@ -21,6 +21,8 @@ export default function Home() {
         <div>
           <Title>Bienvenido a PrestamosDeFi</Title>
         </div>
+
+        <SocioPrincipal />
       </div>
     )
   }
