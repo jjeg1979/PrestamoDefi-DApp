@@ -1,5 +1,5 @@
 import { useAccount } from 'wagmi'
-import { LoadingSpinner, Button, ErrorInfo, TextInput, Title, SocioPrincipal } from '../components/ui'
+import { LoadingSpinner, Button, ErrorInfo, TextInput, Title, SocioPrincipal, TotalLoanBalance } from '../components/ui'
 import AltaPrestamista from './usuarios/AltaPrestamista'
 import { AltaCliente } from './usuarios'
 import { ConnectKitButton } from 'connectkit'
@@ -17,6 +17,7 @@ export default function Home() {
 
       {isConnected ? (
         <>
+          <TotalLoanBalance />
           <SocioPrincipal />
           <AltaPrestamista />
           <AltaCliente />
@@ -24,14 +25,14 @@ export default function Home() {
       ) : (
         <>
           <div className="flex gap-12">
-            <p className="text-gray-500 md:text-xl text-center py-10">
+            <p className="text-gray-500 md:text-xl text-center py-10 font-bold">
               Una aplicación para que gente con ideas pero sin dinero pueda asociarse con gente que esté dispuesta a invertir en esas ideas.
               <br />
               Blockmaker PrestamosDeFi DApp ofrece transacciones rápidas, bajas tarifas y una plataforma segura.            
             </p>
           </div>
           <p className="text-xl sm:text-2xl">🔒 Conecta tu wallet para comenzar.</p>
-          <ConnectKitButton />
+          <ConnectKitButton mode='dark'/>
         </>
       )}
       </div>
