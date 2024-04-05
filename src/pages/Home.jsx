@@ -1,6 +1,7 @@
 import { useAccount } from 'wagmi'
 import { LoadingSpinner, Button, ErrorInfo, TextInput, Title, SocioPrincipal } from '../components/ui'
 import AltaPrestamista from './usuarios/AltaPrestamista'
+import { AltaCliente } from './usuarios'
 
 export default function Home() {
 
@@ -26,6 +27,8 @@ export default function Home() {
         <SocioPrincipal />
 
         <AltaPrestamista />
+
+        <AltaCliente />
       </div>
     )
   }
