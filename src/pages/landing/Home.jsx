@@ -12,7 +12,15 @@ export default function Home() {
         Blockmaker PrestamosDeFi DApp
       </h1>
 
-      {!isConnected && (
+      {isConnected ? (
+        <div className="flex gap-12">
+          <p className="text-gray-500 md:text-xl text-center py-10 font-bold">
+            Una aplicación para que gente con ideas pero sin dinero pueda asociarse con gente que esté dispuesta a invertir en esas ideas.
+            <br />
+            Blockmaker PrestamosDeFi DApp ofrece transacciones rápidas, bajas tarifas y una plataforma segura.            
+          </p>
+        </div>
+      ) : (
         <>
           <div className="flex gap-12">
             <p className="text-gray-500 md:text-xl text-center py-10 font-bold">
