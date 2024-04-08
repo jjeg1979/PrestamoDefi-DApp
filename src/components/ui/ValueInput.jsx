@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-export default function ValueInput({ type = 'text', placeholder, value, onChange, disabled}) {
+export default function ValueInput({ type = 'text', placeholder, value, disabled}) {
     return (
         <div>
-            <input type={type}            
-            onChange={onChange} 
+            <input type={type}
             value={value} 
             placeholder={placeholder}
             disabled={disabled}
@@ -17,6 +16,5 @@ ValueInput.propTypes = {
     type: PropTypes.string,
     placeholder: PropTypes.string,
     value: PropTypes.number,
-    onChange: PropTypes.func,
     disabled: PropTypes.bool,
 }
