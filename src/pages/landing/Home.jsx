@@ -1,6 +1,4 @@
 import { useAccount } from 'wagmi'
-import { SocioPrincipal, TotalLoanBalance } from '../../components/ui'
-import { AltaPrestamista, AltaCliente}  from '../usuarios'
 import { ConnectKitButton } from 'connectkit'
 
 export default function Home() {
@@ -14,14 +12,7 @@ export default function Home() {
         Blockmaker PrestamosDeFi DApp
       </h1>
 
-      {isConnected ? (
-        <>
-          <TotalLoanBalance />
-          <SocioPrincipal />
-          <AltaPrestamista />
-          <AltaCliente />
-        </>
-      ) : (
+      {!isConnected && (
         <>
           <div className="flex gap-12">
             <p className="text-gray-500 md:text-xl text-center py-10 font-bold">
