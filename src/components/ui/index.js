@@ -5,3 +5,4 @@ export { default as TextInput } from "./TextInput";
 export { default as Title } from "./Title";
 export { default as SocioPrincipal } from "./SocioPrincipal";
 export { default as TotalLoanBalance } from "./TotalLoanBalance";
+export { default as ValueInput } from "./ValueInput";
