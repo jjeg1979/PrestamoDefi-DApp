@@ -3,16 +3,19 @@ import { useContractWrite, usePrepareContractWrite, useWaitForTransaction } from
 import { ValueInput, Title, Button } from "../../components/ui"
 import { useState, useEffect } from 'react'
 import { toast } from 'react-hot-toast'
+import Web3 from 'web3'
 
 export default function DepositarGarantia() {
     const [garantia, setGarantia] = useState(0)
+
+    const web3 = new Web3(window.ethereum)
 
     const { config } = usePrepareContractWrite({
         address: import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS,
         abi: PrestamoDefiABI,
         functionName: 'depositarGarantia',
-        enabled: garantia > 0,
-        args: []
+        enabled: garantia > 0,  
+        value: web3.utils.toWei(garantia, 'ether')
     })
 
     const handleGarantiaChange = (event) => {
@@ -48,13 +51,12 @@ export default function DepositarGarantia() {
                 <ValueInput 
                     label="Garantía" 
                     placeholder="cantidad" 
-                    onChange={handleGarantiaChange}
                     type="number"
-                    value={garantia}
+                    value={garantia.toString()}
                 />
 
                 <Button 
-                    onClick={() => write?.(garantia)} 
+                    onClick={() => handleGarantiaChange() && write?.()} 
                     disabled={!garantia || isDepositarGarantiaLoading}
                     isLoading={isDepositarGarantiaLoading}
                 >{isDepositarGarantiaLoading ? "Depositando Garantía..." : "Depositar Garantía"}</Button>
