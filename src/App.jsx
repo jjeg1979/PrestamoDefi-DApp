@@ -20,7 +20,6 @@ function App() {
             <Route path="/usuarios" element={<GestionUsuarios />} />
             <Route path="/prestamos" element={<GestionPrestamos />} />
           </Routes>
-          <Home />
         </AppLayout>
       </ConnectKitProvider>
     </WagmiConfig>    
