@@ -15,9 +15,9 @@ export default function Home() {
       {isConnected ? (
         <div className="flex gap-12">
           <p className="text-gray-500 md:text-xl text-center py-10 font-bold">
-            Una aplicación para que gente con ideas pero sin dinero pueda asociarse con gente que esté dispuesta a invertir en esas ideas.
+            Autentificación correcta. Por favor, visite la sección de usuarios para continuar, si desea dar de alta prestamistas o clientes.
             <br />
-            Blockmaker PrestamosDeFi DApp ofrece transacciones rápidas, bajas tarifas y una plataforma segura.            
+            Para tramitar préstamos, visite la sección de préstamos.            
           </p>
         </div>
       ) : (
