@@ -1,6 +1,6 @@
 import { PrestamoDefiABI } from "../../contracts/ABIs"
 import { useContractWrite, usePrepareContractWrite, useWaitForTransaction } from 'wagmi'
-import { ValueInput, Title, Button } from "../../components/ui"
+import { TextInput, Title, Button } from "../../components/ui"
 import { useState, useEffect } from 'react'
 import { toast } from 'react-hot-toast'
 import Web3 from 'web3'
@@ -48,15 +48,16 @@ export default function DepositarGarantia() {
             <Title>Depositar Garantía</Title>
 
             <form className="grid gap-2"action="">
-                <ValueInput 
+                <TextInput 
                     label="Garantía" 
+                    onChange={handleGarantiaChange}
                     placeholder="cantidad" 
                     type="number"
                     value={garantia.toString()}
                 />
 
                 <Button 
-                    onClick={() => handleGarantiaChange() && write?.()} 
+                    onClick={() => write?.()} 
                     disabled={!garantia || isDepositarGarantiaLoading}
                     isLoading={isDepositarGarantiaLoading}
                 >{isDepositarGarantiaLoading ? "Depositando Garantía..." : "Depositar Garantía"}</Button>
