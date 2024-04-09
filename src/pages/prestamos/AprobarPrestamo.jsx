@@ -4,7 +4,7 @@ import { TextInput, Title, Button } from '../../components/ui'
 import { useState, useEffect } from 'react'
 import { toast } from 'react-hot-toast'
 
-export default function SolicitarPrestamo() {
+export default function AprobarPrestamo() {
 
 
     const [prestatario, setPrestatario] = useState('')
@@ -57,7 +57,7 @@ export default function SolicitarPrestamo() {
                 <TextInput 
                     label="DireccionPrestataario" 
                     onChange={handlePrestatarioChange}
-                    placeholder="direccion prestatario" 
+                    placeholder="direccion cliente" 
                     type="string"
                     value={prestatario}
                 />
