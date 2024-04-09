@@ -2,7 +2,7 @@ import { Card, Typography } from "@materia-tailwind/react";
 import { useContractRead, useAccount } from "wagmi";
 import { PrestamoDefiABI } from "../../contracts/ABIs";
 
-const TABLE_HEAD = ["Cliente", "Monto", "Fecha", "Estado"];
+const TABLE_HEAD = ["Monto", "Plazo", "Estado"];
 
 export default function PrestamosCliente() {
 
@@ -35,7 +35,7 @@ export default function PrestamosCliente() {
             </tr>
           </thead>
           <tbody>
-            {TABLE_ROWS.map(({ name, job, date }, index) => (
+            {TABLE_ROWS.map(({ monto, plazo, estado }, index) => (
               <tr key={name} className="even:bg-blue-gray-50/50">
                 <td className="p-4">
                   <Typography variant="small" color="blue-gray" className="font-normal">
