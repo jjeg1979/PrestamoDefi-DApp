@@ -1,7 +1,8 @@
 import { useAccount, useContractRead } from 'wagmi'
 import { ErrorInfo, SocioPrincipal, TotalLoanBalance } from '../../components/ui'
 import { PrestamoDefiABI } from '../../contracts/ABIs'
-import DepositarGarantia from '../usuarios/DepositarGarantia';
+import DepositarGarantia from './DepositarGarantia';
+import SolicitarPrestamo from './SolicitarPrestamo';
 
 
 export default function GestionPretamos() {
@@ -25,6 +26,7 @@ export default function GestionPretamos() {
             <TotalLoanBalance />
             <SocioPrincipal />
             <DepositarGarantia />
+            <SolicitarPrestamo />
         </>
       ) : (
         <>
