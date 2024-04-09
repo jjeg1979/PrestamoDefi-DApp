@@ -7,6 +7,8 @@ import { Toaster } from 'react-hot-toast'
 import { Routes, Route } from 'react-router-dom'
 import { GestionUsuarios } from './pages/usuarios'
 import { GestionPrestamos } from './pages/prestamos'
+import { PrivateRoutes, PublicRoutes } from './utils/routes'
+import PrivateRoutesGuard from './components/guards/PrivateRoutesGuard'
 
 function App() {
   return (
@@ -16,9 +18,12 @@ function App() {
       <ConnectKitProvider mode="light">
         <AppLayout>
           <Routes>
-            <Route index element={<Home />} />
-            <Route path="/usuarios" element={<GestionUsuarios />} />
-            <Route path="/prestamos" element={<GestionPrestamos />} />
+            <Route path={PublicRoutes.HOME} element={<Home />} />
+            <Route path={PublicRoutes.NOT_FOUND} element={<h1>404 - Not Found</h1>} />
+            <Route path={PublicRoutes.USERS} element={<GestionUsuarios />} />
+            <Route path={PublicRoutes.LOANS} element={<GestionPrestamos />} />
+            <Route element={<PrivateRoutesGuard/>}  />
+              <Route path={PublicRoutes.HOME} element={<Home />} />            
           </Routes>
         </AppLayout>
       </ConnectKitProvider>
