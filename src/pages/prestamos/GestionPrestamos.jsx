@@ -3,6 +3,7 @@ import { ErrorInfo, SocioPrincipal, TotalLoanBalance } from '../../components/ui
 import { PrestamoDefiABI } from '../../contracts/ABIs'
 import DepositarGarantia from './DepositarGarantia';
 import SolicitarPrestamo from './SolicitarPrestamo';
+import AprobarPrestamo from './AprobarPrestamo';
 
 
 export default function GestionPretamos() {
@@ -27,6 +28,7 @@ export default function GestionPretamos() {
             <SocioPrincipal />
             <DepositarGarantia />
             <SolicitarPrestamo />
+            <AprobarPrestamo />
         </>
       ) : (
         <>
