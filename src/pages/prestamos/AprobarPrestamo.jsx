@@ -39,13 +39,13 @@ export default function AprobarPrestamo() {
 
     useEffect(() => {
         if (isAprobarPrestamoSuccess) {
-            toast.success('Préstamo solicitado con éxito')
+            toast.success('Préstamo aprobado con éxito')
             setPrestatario('')
             setPrestamoId('')
         }
 
         if (isAprobarPrestamoError) {
-            toast.error('Error al solicitar el préstamo')
+            toast.error('Error al aprobar el préstamo')
         }
     } , [isAprobarPrestamoSuccess, isAprobarPrestamoError])
 
