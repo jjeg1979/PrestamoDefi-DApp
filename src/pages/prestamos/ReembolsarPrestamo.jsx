@@ -33,12 +33,12 @@ export default function ReembolsarPrestamo() {
 
     useEffect(() => {
         if (isReembolsarPrestamoSuccess) {
-            toast.success('Garantía depositada con éxito')
+            toast.success('Prestamo reembolsado con éxito')
             setIdPrestamo('')
         }
 
         if (isReembolsarPrestamoError) {
-            toast.error('Error al depositar la garantía')
+            toast.error('Error al reembolsar el préstamo')
         }
     }, [isReembolsarPrestamoSuccess, isReembolsarPrestamoError])
 
