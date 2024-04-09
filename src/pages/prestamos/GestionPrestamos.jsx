@@ -25,15 +25,21 @@ export default function GestionPretamos() {
       </h1>
 
       {isConnected && (address === data) ? (
-        <>            
+        <div className="flex flex-col gap-12 place-items-center">            
             <TotalLoanBalance />
             <SocioPrincipal />
-            <DepositarGarantia />
-            <LiquidarGarantia />
-            <SolicitarPrestamo />
-            <AprobarPrestamo />
-            <ReembolsarPrestamo />
-        </>
+            <div className="grid grid-rows-3 grid-flow-col gap-6 place-items-center">
+              <DepositarGarantia />
+              <LiquidarGarantia />
+              <div className="grid grid-rows-subgrid gap-6 row-span-3">
+                <div className="row-start-2">
+                  <SolicitarPrestamo />
+                </div>
+              <AprobarPrestamo />
+              <ReembolsarPrestamo />
+              </div>
+            </div>
+        </div>
       ) : (
         <>
             <ErrorInfo message="Por favor, autentíquese como Socio Principal para poder gestionar los usuarios" />   
