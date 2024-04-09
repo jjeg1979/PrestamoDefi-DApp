@@ -5,6 +5,7 @@ import DepositarGarantia from './DepositarGarantia';
 import SolicitarPrestamo from './SolicitarPrestamo';
 import AprobarPrestamo from './AprobarPrestamo';
 import ReembolsarPrestamo from './ReembolsarPrestamo';
+import LiquidarGarantia from './LiquidarGarantia';
 
 
 export default function GestionPretamos() {
@@ -28,6 +29,7 @@ export default function GestionPretamos() {
             <TotalLoanBalance />
             <SocioPrincipal />
             <DepositarGarantia />
+            <LiquidarGarantia />
             <SolicitarPrestamo />
             <AprobarPrestamo />
             <ReembolsarPrestamo />
