@@ -6,7 +6,7 @@ import { toast } from 'react-hot-toast'
 import Web3 from 'web3'
 
 export default function DepositarGarantia() {
-    const [garantia, setGarantia] = useState(0)
+    const [garantia, setGarantia] = useState('')
 
     const web3 = new Web3(window.ethereum)
 
