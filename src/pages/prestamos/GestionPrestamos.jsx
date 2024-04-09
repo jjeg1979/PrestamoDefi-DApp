@@ -4,6 +4,7 @@ import { PrestamoDefiABI } from '../../contracts/ABIs'
 import DepositarGarantia from './DepositarGarantia';
 import SolicitarPrestamo from './SolicitarPrestamo';
 import AprobarPrestamo from './AprobarPrestamo';
+import ReembolsarPrestamo from './ReembolsarPrestamo';
 
 
 export default function GestionPretamos() {
@@ -29,6 +30,7 @@ export default function GestionPretamos() {
             <DepositarGarantia />
             <SolicitarPrestamo />
             <AprobarPrestamo />
+            <ReembolsarPrestamo />
         </>
       ) : (
         <>
