@@ -14,7 +14,7 @@ export default function LiquidarGarantia() {
     const { config } = usePrepareContractWrite({
         address: import.meta.env.VITE_TOKEN_CONTRACT_ADDRESS,
         abi: PrestamoDefiABI,
-        functionName: 'solicitarPrestamos',
+        functionName: 'liquidarGarantia',
         enabled: prestatario > 0,
         args: [prestatario, prestamoId]
     });
