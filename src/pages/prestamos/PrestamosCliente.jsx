@@ -73,7 +73,7 @@ export default function PrestamosCliente() {
                       <td key={`${index.toString()+4}`} className="px-6 py-4 text-center">
                         {prestamo.result?.aprobado ? 'SÍ' : 'NO'}
                       </td>
-                      <td key={`${index.toString()+5}`} className="px-6 py-4">
+                      <td key={`${index.toString()+5}`} className="px-6 py-4 text-center">
                         {prestamo.result?.reembolsado ? 'SÍ' : 'NO'}
                       </td>
                     </>               
