@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast'
 import { Routes, Route } from 'react-router-dom'
 import { GestionUsuarios } from './pages/usuarios'
 import { GestionPrestamos } from './pages/prestamos'
-import { PrivateRoutes, PublicRoutes } from './utils/routes'
+import { PublicRoutes } from './utils/routes'
 import PrivateRoutesGuard from './components/guards/PrivateRoutesGuard'
 
 function App() {
