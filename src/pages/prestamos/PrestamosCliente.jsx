@@ -68,7 +68,7 @@ export default function PrestamosCliente() {
                         {Web3.utils.fromWei(prestamo.result?.monto, 'ether')}
                       </td>
                       <td key={`${index.toString()+3}`} className="px-6 py-4 text-center">
-                        {(prestamo.result?.plazo/BigInt('1036400')).toString()}
+                        {(prestamo.result?.plazo/BigInt('1036800')).toString()}
                       </td>
                       <td key={`${index.toString()+4}`} className="px-6 py-4 text-center">
                         {prestamo.result?.aprobado ? 'SÍ' : 'NO'}
