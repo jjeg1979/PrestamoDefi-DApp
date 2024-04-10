@@ -1,4 +1,4 @@
-import { PublicRoutes } from '@/utils/routes'
+import { PublicRoutes } from '../../utils/routes'
 import { Navigate, Outlet } from 'react-router-dom'
 import { useAccount } from 'wagmi'
 
