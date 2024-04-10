@@ -6,6 +6,7 @@ import SolicitarPrestamo from './SolicitarPrestamo';
 import AprobarPrestamo from './AprobarPrestamo';
 import ReembolsarPrestamo from './ReembolsarPrestamo';
 import LiquidarGarantia from './LiquidarGarantia';
+import PrestamosCliente from './PrestamosCliente';
 
 
 export default function GestionPretamos() {
@@ -39,6 +40,7 @@ export default function GestionPretamos() {
               <ReembolsarPrestamo />
               </div>
             </div>
+            <PrestamosCliente />
         </div>
       ) : (
         <>
