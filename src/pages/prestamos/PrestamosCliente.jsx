@@ -20,18 +20,105 @@ export default function PrestamosCliente() {
       functionName: 'obtenerPrestamosPorPrestatario',
       args: [address]
     });
+    
 
     // Construcción de las llamadas a useContractReads para obtener los detalles de los préstamos
-    const consultasPrestamos = idsPrestamosCliente.map((id) => ({
-      ...prestamoDeFiContract,
-      functionName: 'obtenerDetallesDePrestamo',
-      args: [address, id]
-    }))    
+    // const consultasPrestamos = idsPrestamosCliente.map((id) => ({
+    //   ...prestamoDeFiContract,
+    //   functionName: 'obtenerDetallesDePrestamo',
+    //   args: [address, id]
+    // }))
+    
+    // Lectura de los detalles de los préstamos del cliente
+    // const { data: detallesPrestamosCliente } = useContractReads({
+    //   contracts: consultasPrestamos
+    // });
 
-    const { data: detallesPrestamosCliente } = useContractReads({
-      contracts: consultasPrestamos
-    });  
+    {console.log(idsPrestamosCliente)}
 
+    const detallesPrestamosCliente = [
+      { result: 
+        {id: BigInt('1'), 
+        monto: BigInt('1000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: true, 
+        reembolsado: false
+        } 
+      }, 
+      { result: 
+        {id: BigInt('2'), 
+        monto: BigInt('2000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: false, 
+        reembolsado: false
+        }
+      },
+      { result: 
+        {id: BigInt('3'), 
+        monto: BigInt('3000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: true, 
+        reembolsado: true
+        }
+      },
+      { result: 
+        {id: BigInt('4'), 
+        monto: BigInt('4000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: false, 
+        reembolsado: false
+        }
+      },
+      { result: 
+        {id: BigInt('5'), 
+        monto: BigInt('5000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: true, 
+        reembolsado: true
+        }
+      },
+      { result: 
+        {id: BigInt('6'), 
+        monto: BigInt('6000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: false, 
+        reembolsado: false
+        }
+      },
+      { result: 
+        {id: BigInt('7'), 
+        monto: BigInt('7000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: true, 
+        reembolsado: true
+        }
+      },
+      { result: 
+        {id: BigInt('8'), 
+        monto: BigInt('8000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: false, 
+        reembolsado: false
+        }
+      },
+      { result: 
+        {id: BigInt('9'), 
+        monto: BigInt('9000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: true, 
+        reembolsado: true
+        }
+      },
+      { result: 
+        {id: BigInt('10'), 
+        monto: BigInt('10000000000000000000'), 
+        plazo: BigInt('1036800'), 
+        aprobado: false, 
+        reembolsado: false
+        }
+      },
+    ];
+   
     return (
       <section className="bg-white p-4 border shadow w-fit rounded-lg text-sm space-y-2" >
         <Title>Préstamos Cliente</Title>
