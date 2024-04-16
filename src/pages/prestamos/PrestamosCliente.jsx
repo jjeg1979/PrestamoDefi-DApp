@@ -121,7 +121,7 @@ export default function PrestamosCliente() {
    
     return (
       <section className="bg-white p-4 border shadow w-fit rounded-lg text-sm space-y-2" >
-        <Title>Préstamos Cliente</Title>
+        <Title>{`Préstamos Cliente con dirección ${address.slice(0,4) + "..." + address.slice(-4)}`}</Title>
 
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-400 uppercase bg-indigo-800 text-center">
@@ -144,29 +144,27 @@ export default function PrestamosCliente() {
               </tr>
           </thead>
           <tbody>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                   
                   {detallesPrestamosCliente.map((prestamo, index) => (
-                    <>
-                      <th key={`${index.toString()+1}`} scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={index}>                    
+                      <th  scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                         {(prestamo.result.id).toString()}
                       </th>                      
-                      <td key={`${index.toString()+2}`} className="px-6 py-4 text-center">
+                      <td className="px-6 py-4 text-center">
                         {Web3.utils.fromWei(prestamo.result?.monto, 'ether')}
                       </td>
-                      <td key={`${index.toString()+3}`} className="px-6 py-4 text-center">
+                      <td className="px-6 py-4 text-center">
                         {(prestamo.result?.plazo/BigInt('1036800')).toString()}
                       </td>
-                      <td key={`${index.toString()+4}`} className="px-6 py-4 text-center">
+                      <td className="px-6 py-4 text-center">
                         {prestamo.result?.aprobado ? 'SÍ' : 'NO'}
                       </td>
-                      <td key={`${index.toString()+5}`} className="px-6 py-4 text-center">
+                      <td className="px-6 py-4 text-center">
                         {prestamo.result?.reembolsado ? 'SÍ' : 'NO'}
                       </td>
-                    </>               
-                    ))}
+                    </tr>                            
+                  ))}
                  
-              </tr>
           </tbody>
     </table>
         
